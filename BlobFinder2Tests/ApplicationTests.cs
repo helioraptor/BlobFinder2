@@ -18,7 +18,7 @@ namespace BlobFinder2.Tests
     [TestClass()]
     public class ApplicationTests
     {
-        Field CreateFieldOriginal() {
+        public static Field CreateFieldOriginal() {
             int[,] data = {{0,0,0,0,0,0,0,0,0,0}
                        ,{0,0,1,1,1,0,0,0,0,0}
                        ,{0,0,1,1,1,1,1,0,0,0}
@@ -62,13 +62,14 @@ namespace BlobFinder2.Tests
                 Assert.AreEqual(result.Top, 333);
             });
 
-            //Mock<ILoggerFactory> loggerFactory = new Mock<ILoggerFactory>();
-            var loggerFactory = new LoggerFactory();
+            var logger = new Mock<ILogger>();
+            Mock<ILoggerFactory> loggerFactory = new Mock<ILoggerFactory>();
+            loggerFactory.Setup(o => o.CreateLogger(It.IsAny<String>())).Returns(logger.Object);
 
-            var geometry = new Geometry(loggerFactory);
+            var geometry = new Geometry(loggerFactory.Object);
 
             // Action
-            Application application = new Application(fileReader.Object, loggerFactory, geometry, printer.Object);
+            Application application = new Application(fileReader.Object, loggerFactory.Object, geometry, printer.Object);
 
             return application;
         }

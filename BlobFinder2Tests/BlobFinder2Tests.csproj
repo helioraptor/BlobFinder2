@@ -149,6 +149,7 @@
   <ItemGroup>
     <Compile Include="ApplicationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GeometryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlobFinder2\BlobFinder2.csproj">
