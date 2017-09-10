@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobFinder2", "BlobFinder2\BlobFinder2.csproj", "{0FBD81D5-856C-4DEB-8F94-55D4E6061695}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobFinder2Tests", "BlobFinder2Tests\BlobFinder2Tests.csproj", "{E7893A60-CE4A-4CE8-B354-E06EBC692172}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FBD81D5-856C-4DEB-8F94-55D4E6061695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBD81D5-856C-4DEB-8F94-55D4E6061695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBD81D5-856C-4DEB-8F94-55D4E6061695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBD81D5-856C-4DEB-8F94-55D4E6061695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7893A60-CE4A-4CE8-B354-E06EBC692172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7893A60-CE4A-4CE8-B354-E06EBC692172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7893A60-CE4A-4CE8-B354-E06EBC692172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7893A60-CE4A-4CE8-B354-E06EBC692172}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
