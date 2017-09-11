@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿/// <copyright file="Dot.cs" company="epam.com">
+///     Epam.com. All rights reserved.
+/// </copyright>
+/// <author>Andrey Zorin</author>
+/// <summary>Single Dot POCO</summary>
+/// 
 namespace BlobFinder2.Models
 {
     public class Dot

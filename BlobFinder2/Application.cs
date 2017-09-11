@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-
+﻿/// <copyright file="Application.cs" company="epam.com">
+///     Epam.com. All rights reserved.
+/// </copyright>
+/// <author>Andrey Zorin</author>
+/// <summary>Blob application</summary>
+/// 
 namespace BlobFinder2
 {
+    using System;
+    using Microsoft.Extensions.Logging;
+
     using Interfaces;
-    using Services;
     using Models;
     public class Application
     {
@@ -35,8 +35,8 @@ namespace BlobFinder2
             return field;
         }
 
-        public Result CalculateBorders(Field field) {
-
+        public Result CalculateBorders(Field field)
+        {
             Result result = new Result();
 
             result.Top = geometry.GetDepth(field);
@@ -76,12 +76,13 @@ namespace BlobFinder2
             return result;
         }
 
-        public void PrintResults(Result result) {
-
+        public void PrintResults(Result result)
+        {
             printer.Print(result);
         }
 
-        public void Run(string filename) {
+        public void Run(string filename)
+        {
             try
             {
                 logger.LogInformation("Starting application with parameter:{0}",filename);

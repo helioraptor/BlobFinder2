@@ -1,29 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BlobFinder2.Models;
-using System.IO;
-
+﻿/// <copyright file="FileReader.cs" company="epam.com">
+///     Epam.com. All rights reserved.
+/// </copyright>
+/// <author>Andrey Zorin</author>
+/// <summary>File IO service</summary>
+/// 
 namespace BlobFinder2.Services
 {
+    using System.IO;
     using Microsoft.Extensions.Logging;
+    using Models;
     using Interfaces;
 
     public class FileReader : BaseService<FileReader>, IFileReader
     {
-        public FileReader(ILoggerFactory loggerFactory):base(loggerFactory) {
+        public FileReader(ILoggerFactory loggerFactory):base(loggerFactory)
+        {
         }
 
-        public Field Read(int matrixSize, string filename) {
+        public Field Read(int matrixSize, string filename)
+        {
             logger.LogInformation("reading matrix size {0} from {1}", matrixSize, filename);
 
             int[,] result = new int[matrixSize, matrixSize];
             int row = 0;
             using (var reader = new StreamReader(filename))
             {
-                List<string> listB = new List<string>();
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();

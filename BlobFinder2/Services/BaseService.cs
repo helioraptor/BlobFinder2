@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿/// <copyright file="BaseService.cs" company="epam.com">
+///     Epam.com. All rights reserved.
+/// </copyright>
+/// <author>Andrey Zorin</author>
+/// <summary>Generic application service</summary>
+/// 
 namespace BlobFinder2.Services
 {
     using Microsoft.Extensions.Logging;
@@ -11,7 +11,8 @@ namespace BlobFinder2.Services
     {
         protected readonly ILogger<T> logger;
 
-        public BaseService(ILoggerFactory loggerFactory) {
+        public BaseService(ILoggerFactory loggerFactory)
+        {
             this.logger = loggerFactory.CreateLogger<T>();
         }
     }

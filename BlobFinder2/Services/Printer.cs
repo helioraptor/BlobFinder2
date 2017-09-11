@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿/// <copyright file="Printer.cs" company="epam.com">
+///     Epam.com. All rights reserved.
+/// </copyright>
+/// <author>Andrey Zorin</author>
+/// <summary>Console IO service</summary>
+/// 
 namespace BlobFinder2.Services
 {
+    using System;
     using Microsoft.Extensions.Logging;
     using Models;
     using Interfaces;
@@ -14,7 +15,8 @@ namespace BlobFinder2.Services
         public Printer(ILoggerFactory loggerFactory):base(loggerFactory)
         {
         }
-        public void Print(Field field) {
+        public void Print(Field field)
+        {
             for (int y = 0; y != 10; y++)
             {
                 for (int x = 0; x != 10; x++)
@@ -46,7 +48,8 @@ namespace BlobFinder2.Services
             }
             Console.Write("\n");
         }
-        public void Print(Result result) {
+        public void Print(Result result)
+        {
             Console.Write("Cell Reads: "+ result.CellReads + "\n");
             Console.Write("Top:"+ result.Top + "\n");
             Console.Write("Left:"+ result.Left + "\n");

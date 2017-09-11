@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BlobFinder2.Models;
-
+﻿/// <copyright file="Geometry.cs" company="epam.com">
+///     Epam.com. All rights reserved.
+/// </copyright>
+/// <author>Andrey Zorin</author>
+/// <summary>Geometry calculation service</summary>
+/// 
 namespace BlobFinder2.Services
 {
+    using System;
     using Microsoft.Extensions.Logging;
+    using Models;
     using Interfaces;
     public class Geometry : BaseService<Geometry>, IGeometry
     {
@@ -98,7 +99,8 @@ namespace BlobFinder2.Services
             throw new Exception("can not find any dots");
         }
 
-        public int GetMatrixSize() {
+        public int GetMatrixSize()
+        {
             return MatrixSize;
         }
     }
